@@ -11,37 +11,38 @@
 Digital-Dad-OCR/
 │
 ├── Data/
-│   ├── Sample_Exams/          ← 9 real exam sheet photos (AR / EN)
+│   ├── Sample_Exams/         
 │   ├── Training/
-│   │   ├── Images/            ← KHATT word images (108,619 samples)
-│   │   └── Ground_Truth/      ← UTF-8 label files (.txt per image)
-│   ├── Processed/             ← Output of 3-image_preprocessing.ipynb
-│   ├── 3-image_preprocessing.ipynb   ← Raw → processed images pipeline
-│   ├── 4-augmentation.ipynb          ← -5° rotation augmentation
-│   └── Paragraphs_Processing.ipynb   ← Paragraph-level segmentation
+│   │   ├── Images/           
+│   │   └── Ground_Truth/     
+│   ├── Processed/            
+│   ├── 3-image_preprocessing.ipynb   
+│   ├── 4-augmentation.ipynb          
+│   └── Paragraphs_Processing.ipynb  
 │
 ├── Model/
 │   ├── Final/
-│   │   └── ResNet50V2_Transfer_Alpha.ipynb   ← FINAL model (97% acc, 3% CER)
+│   │   └── ResNet50V2_Transfer_Alpha.ipynb
+|   |   └── Res50V2Alpha_without_CTC.h5
 │   └── Prototypes/
-│       ├── EfficientNetB1.ipynb    ← 10.33% CER  (baseline)
-│       ├── VGG19.ipynb             ←  5.40% CER
-│       ├── ResNet152.ipynb         ←  2.96% CER  (best prototype → led to ResNet50V2)
-│       └── Paper_Best_VGG_WP.ipynb ← VGG19 local experiment
+│       ├── EfficientNetB1.ipynb    
+│       ├── VGG19.ipynb             
+│       ├── ResNet152.ipynb         
+│       └── Paper_Best_VGG_WP.ipynb
 │
 └── Application/
     ├── Backend/
-    │   ├── app.py                  ← Flask REST API  (port 5000)
+    │   ├── app.py                 
     │   ├── requirements.txt
-    │   ├── OCR.py                  ← Google Cloud Vision OCR
-    │   ├── Grade.py                ← 3-stage Gemini grading pipeline
+    │   ├── OCR.py                  
+    │   ├── Grade.py               
     │   ├── Preprocessing/
-    │   │   ├── preprocess.py       ← Standalone preprocessing script
-    │   │   ├── extractor.py        ← DocTr BasicEncoder CNN
+    │   │   ├── preprocess.py       
+    │   │   ├── extractor.py        
     │   │   ├── position_encoding.py← Sinusoidal / learned 2-D PE
     │   │   └── App_Preprocessing_Steps.ipynb
     │   ├── OCR/
-    │   │   └── inference.py        ← ResNet50V2 + CTC inference wrapper
+    │   │   └── inference.py       
     │   └── Exam_Grading/
     │       ├── Grade.py
     │       ├── ocr.txt / ocr_cleaned.txt
@@ -49,12 +50,12 @@ Digital-Dad-OCR/
     │       └── QwAnswers.txt
     └── Frontend/
         └── src/
-            └── App.jsx             ← React app (multilingual UI)
+            └── App.jsx            
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Backend
 ```bash
