@@ -1,4 +1,4 @@
-# Digital Platform — Multilingual Handwritten Exam OCR
+# Multilingual Handwritten Exam
 
 > Accurate extraction of Arabic, French, and English student answers from scanned exam sheets,
 > with **zero modification** of the original content.
